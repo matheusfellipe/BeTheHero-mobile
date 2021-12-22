@@ -23,6 +23,7 @@ export default function Incidents() {
         const response = await api.get('incidents');
 
         setIncidents(response.data);
+        console.log("Chegou aqui", response);
         setTotal(response.headers['x-total-count']);
     }
     useEffect(() => {
